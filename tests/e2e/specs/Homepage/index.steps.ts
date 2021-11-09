@@ -14,14 +14,14 @@ Then(/^a searchbar should be available$/, () => {
 });
 
 Then(/^searchBar placeholder should be updated in time \(at T = (\d+)ms, should be "([^"]+)"\)$/, async (delay, placeholder) => {
-  cy.clock();
-  cy.tick(delay);
+  cy.clock().tick(delay);
 
   const raf = () => new Promise((resolve) => {
     cy['state']('window').requestAnimationFrame(resolve);
   });
 
-  await raf().then(() => {
-    cy.get('#searchbar').should('have.attr', 'placeholder', placeholder);
-  });
+  await raf();
+
+  cy.get('#searchbar').should('have.attr', 'placeholder', placeholder);
+  cy.clock().invoke('restore');
 });

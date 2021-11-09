@@ -23,7 +23,7 @@
             "name": "I open the homepage",
             "result": {
               "status": "passed",
-              "duration": 343000000
+              "duration": 424000000
             }
           },
           {
@@ -33,7 +33,7 @@
             "name": "page node title should be \"[Loft Terral] Where do we go?\"",
             "result": {
               "status": "passed",
-              "duration": 19000000
+              "duration": 14000000
             }
           }
         ]
@@ -53,7 +53,7 @@
             "name": "I open the homepage",
             "result": {
               "status": "passed",
-              "duration": 350000000
+              "duration": 382000000
             }
           },
           {
@@ -63,7 +63,7 @@
             "name": "a searchbar should be available",
             "result": {
               "status": "passed",
-              "duration": 14000000
+              "duration": 20000000
             }
           }
         ]
@@ -83,7 +83,7 @@
             "name": "I open the homepage",
             "result": {
               "status": "passed",
-              "duration": 298000000
+              "duration": 306000000
             }
           },
           {
@@ -92,8 +92,8 @@
             "line": 15,
             "name": "searchBar placeholder should be updated in time (at T = 0ms, should be \"I want to go to... London\")",
             "result": {
-              "status": "passed",
-              "duration": 27000000
+              "status": "failed",
+              "error_message": "CypressError: cy.then() timed out after waiting '4000ms'.\n\nYour callback function returned a promise which never resolved.\n\nThe callback function was:\n\n() =>\n      resolveAndRunStepDefinition.call(\n        this,\n        stepDetails,\n        replaceParameterTags,\n        exampleRowData,\n        state.feature.name\n      )\n    at Object.cypressErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:8080/__cypress/runner/cypress_runner.js:86194:17)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:69302:21\nFrom previous event:\n    at Context.thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:69301:13)\n    at Context.then (http://localhost:8080/__cypress/runner/cypress_runner.js:69660:21)\n    at Context.<anonymous> (http://localhost:8080/__cypress/runner/cypress_runner.js:81414:21)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:80892:33\nFrom previous event:\n    at runCommand (http://localhost:8080/__cypress/runner/cypress_runner.js:80871:14)\n    at next (http://localhost:8080/__cypress/runner/cypress_runner.js:81014:14)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:81042:16\nFrom previous event:\n    at next (http://localhost:8080/__cypress/runner/cypress_runner.js:81014:34)\nFrom previous event:\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:81055:37\nFrom previous event:\n    at run (http://localhost:8080/__cypress/runner/cypress_runner.js:81048:19)\n    at Object.cy.<computed> [as then] (http://localhost:8080/__cypress/runner/cypress_runner.js:81457:11)\n    at Context.runnable.fn (http://localhost:8080/__cypress/runner/cypress_runner.js:81699:24)\n    at callFn (http://localhost:8080/__cypress/runner/cypress_runner.js:30929:21)\n    at Test.../driver/node_modules/mocha/lib/runnable.js.Runnable.run (http://localhost:8080/__cypress/runner/cypress_runner.js:30922:7)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:84877:28\nFrom previous event:\n    at Object.onRunnableRun (http://localhost:8080/__cypress/runner/cypress_runner.js:84865:20)\n    at $Cypress.action (http://localhost:8080/__cypress/runner/cypress_runner.js:78026:61)\n    at Test.Runnable.run (http://localhost:8080/__cypress/runner/cypress_runner.js:83558:13)\n    at Runner.../driver/node_modules/mocha/lib/runner.js.Runner.runTest (http://localhost:8080/__cypress/runner/cypress_runner.js:31396:10)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:31502:12\n    at next (http://localhost:8080/__cypress/runner/cypress_runner.js:31316:14)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:31326:7\n    at next (http://localhost:8080/__cypress/runner/cypress_runner.js:31258:14)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:31289:7\n    at next (http://localhost:8080/__cypress/runner/cypress_runner.js:84801:16)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:84822:11\nFrom previous event:\n    at onNext (http://localhost:8080/__cypress/runner/cypress_runner.js:84819:57)\n    at done (http://localhost:8080/__cypress/runner/cypress_runner.js:30890:5)\n    at callFn (http://localhost:8080/__cypress/runner/cypress_runner.js:30947:7)\n    at Hook.../driver/node_modules/mocha/lib/runnable.js.Runnable.run (http://localhost:8080/__cypress/runner/cypress_runner.js:30922:7)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:84877:28\nFrom previous event:\n    at Object.onRunnableRun (http://localhost:8080/__cypress/runner/cypress_runner.js:84865:20)\n    at $Cypress.action (http://localhost:8080/__cypress/runner/cypress_runner.js:78026:61)\n    at Hook.Runnable.run (http://localhost:8080/__cypress/runner/cypress_runner.js:83558:13)\n    at next (http://localhost:8080/__cypress/runner/cypress_runner.js:31272:10)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:31294:5\n    at timeslice (http://localhost:8080/__cypress/runner/cypress_runner.js:26362:27)"
             }
           }
         ]
@@ -113,7 +113,7 @@
             "name": "I open the homepage",
             "result": {
               "status": "passed",
-              "duration": 314000000
+              "duration": 234000000
             }
           },
           {
@@ -122,8 +122,8 @@
             "line": 15,
             "name": "searchBar placeholder should be updated in time (at T = 2500ms, should be \"I want to go to... New-York\")",
             "result": {
-              "status": "passed",
-              "duration": 2510000000
+              "status": "failed",
+              "error_message": "CypressError: cy.then() timed out after waiting '4000ms'.\n\nYour callback function returned a promise which never resolved.\n\nThe callback function was:\n\n() =>\n      resolveAndRunStepDefinition.call(\n        this,\n        stepDetails,\n        replaceParameterTags,\n        exampleRowData,\n        state.feature.name\n      )\n    at Object.cypressErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:8080/__cypress/runner/cypress_runner.js:86194:17)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:69302:21\nFrom previous event:\n    at Context.thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:69301:13)\n    at Context.then (http://localhost:8080/__cypress/runner/cypress_runner.js:69660:21)\n    at Context.<anonymous> (http://localhost:8080/__cypress/runner/cypress_runner.js:81414:21)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:80892:33\nFrom previous event:\n    at runCommand (http://localhost:8080/__cypress/runner/cypress_runner.js:80871:14)\n    at next (http://localhost:8080/__cypress/runner/cypress_runner.js:81014:14)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:81042:16\nFrom previous event:\n    at next (http://localhost:8080/__cypress/runner/cypress_runner.js:81014:34)\nFrom previous event:\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:81055:37\nFrom previous event:\n    at run (http://localhost:8080/__cypress/runner/cypress_runner.js:81048:19)\n    at Object.cy.<computed> [as then] (http://localhost:8080/__cypress/runner/cypress_runner.js:81457:11)\n    at Context.runnable.fn (http://localhost:8080/__cypress/runner/cypress_runner.js:81699:24)\n    at callFn (http://localhost:8080/__cypress/runner/cypress_runner.js:30929:21)\n    at Test.../driver/node_modules/mocha/lib/runnable.js.Runnable.run (http://localhost:8080/__cypress/runner/cypress_runner.js:30922:7)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:84877:28\nFrom previous event:\n    at Object.onRunnableRun (http://localhost:8080/__cypress/runner/cypress_runner.js:84865:20)\n    at $Cypress.action (http://localhost:8080/__cypress/runner/cypress_runner.js:78026:61)\n    at Test.Runnable.run (http://localhost:8080/__cypress/runner/cypress_runner.js:83558:13)\n    at Runner.../driver/node_modules/mocha/lib/runner.js.Runner.runTest (http://localhost:8080/__cypress/runner/cypress_runner.js:31396:10)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:31502:12\n    at next (http://localhost:8080/__cypress/runner/cypress_runner.js:31316:14)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:31326:7\n    at next (http://localhost:8080/__cypress/runner/cypress_runner.js:31258:14)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:31289:7\n    at next (http://localhost:8080/__cypress/runner/cypress_runner.js:84801:16)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:84822:11\nFrom previous event:\n    at onNext (http://localhost:8080/__cypress/runner/cypress_runner.js:84819:57)\n    at done (http://localhost:8080/__cypress/runner/cypress_runner.js:30890:5)\n    at callFn (http://localhost:8080/__cypress/runner/cypress_runner.js:30947:7)\n    at Hook.../driver/node_modules/mocha/lib/runnable.js.Runnable.run (http://localhost:8080/__cypress/runner/cypress_runner.js:30922:7)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:84877:28\nFrom previous event:\n    at Object.onRunnableRun (http://localhost:8080/__cypress/runner/cypress_runner.js:84865:20)\n    at $Cypress.action (http://localhost:8080/__cypress/runner/cypress_runner.js:78026:61)\n    at Hook.Runnable.run (http://localhost:8080/__cypress/runner/cypress_runner.js:83558:13)\n    at next (http://localhost:8080/__cypress/runner/cypress_runner.js:31272:10)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:31294:5\n    at timeslice (http://localhost:8080/__cypress/runner/cypress_runner.js:26362:27)"
             }
           }
         ]
@@ -143,7 +143,7 @@
             "name": "I open the homepage",
             "result": {
               "status": "passed",
-              "duration": 196000000
+              "duration": 227000000
             }
           },
           {
@@ -153,97 +153,7 @@
             "name": "searchBar placeholder should be updated in time (at T = 5000ms, should be \"I want to go to... Bali\")",
             "result": {
               "status": "failed",
-              "error_message": "CypressError: Timed out retrying: expected '<input#searchbar>' to have attribute 'placeholder' with the value 'I want to go to... Bali', but the value was 'I want to go to... New-York'\n    at Object.cypressErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:8080/__cypress/runner/cypress_runner.js:86194:17)\n    at retry (http://localhost:8080/__cypress/runner/cypress_runner.js:76849:16)\n    at onFailFn (http://localhost:8080/__cypress/runner/cypress_runner.js:65634:16)\nFrom previous event:\n    at Object.verifyUpcomingAssertions (http://localhost:8080/__cypress/runner/cypress_runner.js:65813:16)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:71950:21\nFrom previous event:\n    at resolveElements (http://localhost:8080/__cypress/runner/cypress_runner.js:71945:44)\n    at tryFn (http://localhost:8080/__cypress/runner/cypress_runner.js:77307:21)\n    at whenStable (http://localhost:8080/__cypress/runner/cypress_runner.js:77342:12)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:76892:16"
-            }
-          }
-        ]
-      },
-      {
-        "id": "homepage;searchbar-placeholder-should-rotate-every-2500ms",
-        "keyword": "Scenario",
-        "line": 21,
-        "name": "Searchbar placeholder should rotate every 2500ms",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 14,
-            "name": "I open the homepage",
-            "result": {
-              "status": "passed",
-              "duration": 150000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 15,
-            "name": "searchBar placeholder should be updated in time (at T = 7500ms, should be \"I want to go to... Shanghai\")",
-            "result": {
-              "status": "failed",
-              "error_message": "CypressError: Timed out retrying: expected '<input#searchbar>' to have attribute 'placeholder' with the value 'I want to go to... Shanghai', but the value was 'I want to go to... New-York'\n    at Object.cypressErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:8080/__cypress/runner/cypress_runner.js:86194:17)\n    at retry (http://localhost:8080/__cypress/runner/cypress_runner.js:76849:16)\n    at onFailFn (http://localhost:8080/__cypress/runner/cypress_runner.js:65634:16)\nFrom previous event:\n    at Object.verifyUpcomingAssertions (http://localhost:8080/__cypress/runner/cypress_runner.js:65813:16)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:71950:21\nFrom previous event:\n    at resolveElements (http://localhost:8080/__cypress/runner/cypress_runner.js:71945:44)\n    at tryFn (http://localhost:8080/__cypress/runner/cypress_runner.js:77307:21)\n    at whenStable (http://localhost:8080/__cypress/runner/cypress_runner.js:77342:12)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:76892:16"
-            }
-          }
-        ]
-      },
-      {
-        "id": "homepage;searchbar-placeholder-should-rotate-every-2500ms",
-        "keyword": "Scenario",
-        "line": 22,
-        "name": "Searchbar placeholder should rotate every 2500ms",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 14,
-            "name": "I open the homepage",
-            "result": {
-              "status": "passed",
-              "duration": 157000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 15,
-            "name": "searchBar placeholder should be updated in time (at T = 10000ms, should be \"I want to go to... Tokyo\")",
-            "result": {
-              "status": "failed",
-              "error_message": "CypressError: Timed out retrying: expected '<input#searchbar>' to have attribute 'placeholder' with the value 'I want to go to... Tokyo', but the value was 'I want to go to... New-York'\n    at Object.cypressErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:8080/__cypress/runner/cypress_runner.js:86194:17)\n    at retry (http://localhost:8080/__cypress/runner/cypress_runner.js:76849:16)\n    at onFailFn (http://localhost:8080/__cypress/runner/cypress_runner.js:65634:16)\nFrom previous event:\n    at Object.verifyUpcomingAssertions (http://localhost:8080/__cypress/runner/cypress_runner.js:65813:16)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:71950:21\nFrom previous event:\n    at resolveElements (http://localhost:8080/__cypress/runner/cypress_runner.js:71945:44)\n    at tryFn (http://localhost:8080/__cypress/runner/cypress_runner.js:77307:21)\n    at whenStable (http://localhost:8080/__cypress/runner/cypress_runner.js:77342:12)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:76892:16"
-            }
-          }
-        ]
-      },
-      {
-        "id": "homepage;searchbar-placeholder-should-rotate-every-2500ms",
-        "keyword": "Scenario",
-        "line": 23,
-        "name": "Searchbar placeholder should rotate every 2500ms",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 14,
-            "name": "I open the homepage",
-            "result": {
-              "status": "passed",
-              "duration": 155000000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 15,
-            "name": "searchBar placeholder should be updated in time (at T = 12500ms, should be \"I want to go to... London\")",
-            "result": {
-              "status": "passed",
-              "duration": 14000000
+              "error_message": "CypressError: cy.then() timed out after waiting '4000ms'.\n\nYour callback function returned a promise which never resolved.\n\nThe callback function was:\n\n() =>\n      resolveAndRunStepDefinition.call(\n        this,\n        stepDetails,\n        replaceParameterTags,\n        exampleRowData,\n        state.feature.name\n      )\n    at Object.cypressErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86207:11)\n    at Object.throwErr (http://localhost:8080/__cypress/runner/cypress_runner.js:86162:18)\n    at Object.throwErrByPath (http://localhost:8080/__cypress/runner/cypress_runner.js:86194:17)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:69302:21\nFrom previous event:\n    at Context.thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:69301:13)\n    at Context.then (http://localhost:8080/__cypress/runner/cypress_runner.js:69660:21)\n    at Context.<anonymous> (http://localhost:8080/__cypress/runner/cypress_runner.js:81414:21)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:80892:33\nFrom previous event:\n    at runCommand (http://localhost:8080/__cypress/runner/cypress_runner.js:80871:14)\n    at next (http://localhost:8080/__cypress/runner/cypress_runner.js:81014:14)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:81042:16\nFrom previous event:\n    at next (http://localhost:8080/__cypress/runner/cypress_runner.js:81014:34)\nFrom previous event:\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:81055:37\nFrom previous event:\n    at run (http://localhost:8080/__cypress/runner/cypress_runner.js:81048:19)\n    at Object.cy.<computed> [as then] (http://localhost:8080/__cypress/runner/cypress_runner.js:81457:11)\n    at Context.runnable.fn (http://localhost:8080/__cypress/runner/cypress_runner.js:81699:24)\n    at callFn (http://localhost:8080/__cypress/runner/cypress_runner.js:30929:21)\n    at Test.../driver/node_modules/mocha/lib/runnable.js.Runnable.run (http://localhost:8080/__cypress/runner/cypress_runner.js:30922:7)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:84877:28\nFrom previous event:\n    at Object.onRunnableRun (http://localhost:8080/__cypress/runner/cypress_runner.js:84865:20)\n    at $Cypress.action (http://localhost:8080/__cypress/runner/cypress_runner.js:78026:61)\n    at Test.Runnable.run (http://localhost:8080/__cypress/runner/cypress_runner.js:83558:13)\n    at Runner.../driver/node_modules/mocha/lib/runner.js.Runner.runTest (http://localhost:8080/__cypress/runner/cypress_runner.js:31396:10)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:31502:12\n    at next (http://localhost:8080/__cypress/runner/cypress_runner.js:31316:14)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:31326:7\n    at next (http://localhost:8080/__cypress/runner/cypress_runner.js:31258:14)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:31289:7\n    at next (http://localhost:8080/__cypress/runner/cypress_runner.js:84801:16)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:84822:11\nFrom previous event:\n    at onNext (http://localhost:8080/__cypress/runner/cypress_runner.js:84819:57)\n    at done (http://localhost:8080/__cypress/runner/cypress_runner.js:30890:5)\n    at callFn (http://localhost:8080/__cypress/runner/cypress_runner.js:30947:7)\n    at Hook.../driver/node_modules/mocha/lib/runnable.js.Runnable.run (http://localhost:8080/__cypress/runner/cypress_runner.js:30922:7)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:84877:28\nFrom previous event:\n    at Object.onRunnableRun (http://localhost:8080/__cypress/runner/cypress_runner.js:84865:20)\n    at $Cypress.action (http://localhost:8080/__cypress/runner/cypress_runner.js:78026:61)\n    at Hook.Runnable.run (http://localhost:8080/__cypress/runner/cypress_runner.js:83558:13)\n    at next (http://localhost:8080/__cypress/runner/cypress_runner.js:31272:10)\n    at http://localhost:8080/__cypress/runner/cypress_runner.js:31294:5\n    at timeslice (http://localhost:8080/__cypress/runner/cypress_runner.js:26362:27)"
             }
           }
         ]

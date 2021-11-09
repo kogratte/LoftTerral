@@ -17,7 +17,3 @@ Feature: Homepage
       | placeholder                 | delay |
       | I want to go to... London   | 0     |
       | I want to go to... New-York | 2500  |
-      | I want to go to... Bali     | 5000  |
-      | I want to go to... Shanghai | 7500  |
-      | I want to go to... Tokyo    | 10000 |
-      | I want to go to... London   | 12500 |
