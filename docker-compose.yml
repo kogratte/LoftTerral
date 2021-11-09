@@ -1,0 +1,22 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: loftterral-prd
+    ports:
+      - "80:80"
+    profiles:
+      - prd
+
+  local:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: loftterral-dev
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    profiles:
+      - dev

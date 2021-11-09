@@ -1,0 +1,54 @@
+name: Node.js CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install and tests
+        run: |
+          npm install
+          npm run test:unit:ci
+      - name: Test Report
+        uses: dorny/test-reporter@v1
+        with:
+          name: Unit tests
+          path: reports/unit_tests.xml 
+          reporter: jest-junit
+      - name: Run docker container
+        run: docker-compose up -d
+      - name: Run e2e tests
+        uses: cypress-io/github-action@v2
+
+      - uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: tests/e2e/screenshots
+      - uses: actions/upload-artifact@v1
+        if: always()
+        with:
+          name: cypress-videos
+          path: tests/e2e/videos      
+      - name: Publish e2e results
+        uses: dorny/test-reporter@v1
+        with:
+          name: Unit tests
+          path: reports/e2e.xml 
+          reporter: cypress-junit
+    
+     
