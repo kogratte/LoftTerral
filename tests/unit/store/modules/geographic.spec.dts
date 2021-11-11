@@ -1,0 +1,44 @@
+import * as geo from '@/store/modules/geographic';
+import apolloSvc from '@/services/apollo';
+import GET_ALL_DATA from '@/graphql/queries/getAll';
+
+describe('VueX Geographic module', () => {
+  describe('Actions', () => {
+    describe('Init', () => {
+      const fakeData = {};
+      const fakeClient = {
+        query: jest.fn().mockResolvedValue(fakeData),
+      };
+      const fakeCommit = jest.fn();
+      beforeAll(() => {
+        apolloSvc.getApolloClient = jest.fn().mockReturnValue(fakeClient);
+      });
+      afterEach(() => {
+        jest.resetAllMocks();
+      });
+
+      test('Should commit login', () => {
+        geo.actions.INIT({ commit: fakeCommit });
+        expect(fakeCommit).toHaveBeenCalledWith('SET_LOADING', true);
+      });
+
+      test('It should fetch data using apollo, then dispatch SET_DATA', () => {
+        const fakeResponse = {
+          data: {
+            data: {
+              continents: [
+              ],
+            },
+          },
+        };
+        fakeClient.query.mockResolvedValue(fakeResponse);
+        geo.actions.INIT({ commit: fakeCommit });
+
+        expect(fakeClient.query).toHaveBeenCalledWith({
+          query: GET_ALL_DATA,
+        });
+        expect(fakeCommit).toHaveBeenCalledWith('SET_DATA', fakeResponse.data.data.continents);
+      });
+    });
+  });
+});

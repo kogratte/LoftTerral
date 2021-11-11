@@ -30,20 +30,7 @@ describe('Store Research Module', () => {
     });
   });
 
-  describe('Getters', () => {
-    test('hasPendingResearch should return false if research is lower or equal to 2 char, true otherwise', () => {
-      expect(researchModule.getters.hasPendingResearch(fakeState)).toBeFalsy();
-
-      fakeState.currentResearch = 'b';
-      expect(researchModule.getters.hasPendingResearch(fakeState)).toBeFalsy();
-
-      fakeState.currentResearch = 'ba';
-      expect(researchModule.getters.hasPendingResearch(fakeState)).toBeFalsy();
-
-      fakeState.currentResearch = 'barc';
-      expect(researchModule.getters.hasPendingResearch(fakeState)).toBeTruthy();
-    });
-  });
+//  describe('Getters', () => {});
 
   test('Module should be namespaced', () => {
     expect(researchModule.namespaced).toBeTruthy();

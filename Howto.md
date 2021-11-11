@@ -30,3 +30,16 @@ NB: Apollo provide it's own cache (InMemory), and does not require the usage of 
 NB2: There is a base image for cypress in docker. I'll add it later...
 
 
+## Step 4: This is an HUGE mess!
+
+First part, creating a simple app, was pretty easy. But, after that, came styling.
+Styling when you're using vuetify is pretty painful, and it's very difficult to get a nice result.
+But, styling is not mandatory for now, it does not break any test if features are working.
+
+## Step 5: What about graphql?
+
+Let's try to use graphql..
+It seems:
+- vue-apollo is not maintained anymore. You've to use the latest version, wich is not fully working on vue2 without any tweak.
+- It is not written by, and for typescript.
+- Is difficult to use, when you do not know it already.

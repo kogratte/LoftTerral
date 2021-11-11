@@ -1,27 +1,30 @@
 <template>
-  <v-form>
-    <v-text-field
-        v-model="research"
-        :label="label"
-        id="searchbar"
-        required
-        :fullWidth="true"
-        placeholder="Where do I want to go?"
-      ></v-text-field>
-    </v-form>
+  <v-text-field
+      v-model="research"
+      :label="label"
+      class="searchbar"
+      required
+      dark
+      :fullWidth="true"
+      outlined
+      placeholder="Where do I want to go?"
+    ></v-text-field>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import { mapGetters } from 'vuex';
 // Rolling delay in ms
-const ROLLING_DELAY = 5000;
 
 @Component({
-  ...mapGetters('researchModule', {
-    research: 'currentResearch',
-  }),
+  computed: {
+    ...mapGetters('researchModule', {
+      research: 'currentResearch',
+    }),
+  },
 })
 export default class Searchbar extends Vue {
+  readonly ROLLING_DELAY = 3000;
+
   /**
    * Counter for label rotation
    */
@@ -44,7 +47,7 @@ export default class Searchbar extends Vue {
   }
 
   get label(): string {
-    return `I want to go to... ${this.cities[this.count]}?`;
+    return `I want to go to ${this.cities[this.count]}!`;
   }
 
   rotatePlaceholder(): void {
@@ -57,7 +60,7 @@ export default class Searchbar extends Vue {
   }
 
   enablePlaceholderRotation(): void {
-    setTimeout(this.rotatePlaceholder, ROLLING_DELAY);
+    setTimeout(this.rotatePlaceholder, this.ROLLING_DELAY);
   }
 
   mounted(): void {
@@ -66,4 +69,5 @@ export default class Searchbar extends Vue {
 }
 </script>
 <style lang="scss">
+
 </style>

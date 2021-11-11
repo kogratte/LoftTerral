@@ -25,7 +25,6 @@ export const mutations = {
 };
 
 export const getters = {
-  hasPendingResearch: (state: ResearchState) => state.currentResearch.length > 2,
 };
 
 export const actions = {

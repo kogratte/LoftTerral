@@ -1,29 +1,51 @@
 <template>
   <div id="app">
-    <router-view />
+    <v-container class="fill-height align-center">
+      <v-row class="content">
+        <v-col>
+          <router-view />
+        </v-col>
+      </v-row>
+      <v-row fluid class="footer">
+        <v-col>
+          <div>&copy;LofTerral 2021</div>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
+<script lang="ts">
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { Component, Vue } from 'vue-property-decorator';
 
+@Component({
+
+})
+export default class App extends Vue {
+  mounted(): void {
+    this.$store.dispatch('geographic/INIT');
+  }
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
   height: 100vh;
+  background-image: url('assets/bg.jpg');
+  background-size: cover;
+  padding: 1rem;
 }
 
-#nav {
-  padding: 30px;
+#app .content {
+  height: calc(100% - .8rem);
+  align-items: center;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+#app .footer {
+  height: .8rem;
+  font-size: .6rem;
+  color: white;
 }
 </style>

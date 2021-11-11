@@ -1,14 +1,13 @@
 <template>
-  <v-container fill-height fluid>
-    <v-row class="search-bar" :class="{ 'research': hasPendingResearch }">
+  <v-container class="fill-height flex-column" fluid>
+    <v-row fluid>
       <v-col>
-        <searchbar />
+        <searchbar class="searchbar" />
       </v-col>
     </v-row>
-
-    <v-row fill-height class="results-area" :class="{ 'hidden': !hasPendingResearch }">
+    <v-row fluid dense>
       <v-col>
-        <results />
+        <stats />
       </v-col>
     </v-row>
   </v-container>
@@ -16,40 +15,16 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { mapGetters } from 'vuex';
 import Searchbar from '@/components/Searchbar.vue';
 import Results from '@/components/Results.vue';
+import Stats from '@/components/Stats.vue';
 
 @Component({
-  computed: {
-    ...mapGetters('research', [
-      'hasPendingResearch',
-    ]),
-  },
-  components: { Searchbar, Results },
+  components: { Searchbar, Results, Stats },
 })
 export default class Home extends Vue {
-  hasPendingResearch!: boolean;
 }
 </script>
 <style lang="scss" scoped>
-.search-bar {
-  position: absolute;
-  width: 100%;
-  top: 50vh;
-  transition: top 0.3s ease-in;
 
-  &.research {
-    top: 0;
-  }
-}
-.results-area {
-  transition: visibility 0.2s ease-in 0.3s;
-  visibility: visible;
-
-  &.hidden {
-    visibility: hidden;
-    transition: visibility 0 ease 0.3s;
-  }
-}
 </style>
